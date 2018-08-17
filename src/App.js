@@ -33,7 +33,7 @@ class App extends Component {
     }
   }
   
-  deleteItem = id => () => {
+  deleteItem = id => evt => {
     const { todos } = this.state;
     
     this.setState({
@@ -51,9 +51,9 @@ class App extends Component {
       <div className="App">
       		<BrowserRouter>
 					<Switch>
-          <Route exact path='/' render={() => <ToDoList todos={todos} handleClick={this.handleClick} deleteItem={this.deleteItem}/>}/>
-          <Route path='/active' render={() => <ToDoList todos={todos.filter(todo => !todo.completed)} taskCompleted={this.handleClick} deleteItem={this.deleteItem}/>}/>
-          <Route path='/completed' render={() => <ToDoList todos={todos.filter(todo => todo.completed)} handleClick={this.handleClick} deleteItem={this.deleteItem}/>}/>
+          <Route exact path='/' render={() => <ToDoList todos={todos} handleClick={this.handleClick} deleteItem={this.deleteItem} deleteAllItems={this.deleteAllItems}/>}/>
+          <Route path='/active' render={() => <ToDoList todos={todos.filter(todo => !todo.completed)} handleClick={this.handleClick} deleteItem={this.deleteItem} deleteAllItems={this.deleteAllItems}/>}/>
+          <Route path='/completed' render={() => <ToDoList todos={todos.filter(todo => todo.completed)} handleClick={this.handleClick} deleteItem={this.deleteItem} deleteAllItems={this.deleteAllItems}/>}/>
         </Switch>
 				</BrowserRouter>
        

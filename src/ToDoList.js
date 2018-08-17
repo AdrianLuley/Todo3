@@ -27,17 +27,17 @@ class ToDoList extends React.Component {
 					<span className="todo-count"><strong>{this.props.todos.length}</strong> item(s) left</span>
 					<ul className="filters">
 						<li>
-							<a href="#/">
+							<a href="/">
 							All
 							</a>
 						</li>
 						<li>
-							<a href="#/active">
+							<a href="/active">
 							Active
 							</a>
 						</li>
 						<li>
-							<a href="#/completed">
+							<a href="/completed">
 							Completed
 							</a>
 						</li>
