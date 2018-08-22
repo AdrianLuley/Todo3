@@ -49,7 +49,7 @@ class App extends Component {
     const todos = this.state.todos;
     return (
       <div className="App">
-      		<BrowserRouter>
+      		 <BrowserRouter basename={process.env.PUBLIC_URL}>
 					<Switch>
           <Route exact path='/' render={() => <ToDoList todos={todos} handleClick={this.handleClick} deleteItem={this.deleteItem} deleteAllItems={this.deleteAllItems}/>}/>
           <Route path='/active' render={() => <ToDoList todos={todos.filter(todo => !todo.completed)} handleClick={this.handleClick} deleteItem={this.deleteItem} deleteAllItems={this.deleteAllItems}/>}/>
