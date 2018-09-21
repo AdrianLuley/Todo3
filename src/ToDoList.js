@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom'
 import ToDoItem from './ToDoItem';
 
 
@@ -27,19 +27,19 @@ class ToDoList extends React.Component {
 					<span className="todo-count"><strong>{this.props.todos.length}</strong> item(s) left</span>
 					<ul className="filters">
 						<li>
-							<a href="/">
+							<Link to="/">
 							All
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href="/active">
+							<Link to="/active">
 							Active
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href="/completed">
+							<Link to="/completed">
 							Completed
-							</a>
+							</Link>
 						</li>
 						</ul>
 						
